@@ -1,9 +1,17 @@
+import Link from "next/link";
+import Header from "./components/header";
 export default function Home() {
   return (
-    <main>
-      <img src="/logo.png" alt="A server surrounded by magic sparkles." />
-      <h1>Welcome to this NextJS Course!</h1>
-      <p>🔥 Let&apos;s get started! 🔥</p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Link href="/about">
+          <button className="text-center">Go To About Page</button>
+        </Link>
+        <Link href="/blog">
+          <button className="text-center">Go To Blog Page</button>
+        </Link>
+      </main>
+    </>
   );
 }
